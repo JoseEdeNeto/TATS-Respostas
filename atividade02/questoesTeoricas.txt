@@ -1,0 +1,26 @@
+-Teste de software refere-se à verificar e validar um software a fim de fornecer informações com relação a qualidade do
+produto, com relação a encontrar defeitos e verificar se funcionalidades estão implementadas de forma correta.
+
+-Teste de unidade refere-se a testar uma única unidade do sistema, podendo simular as interações que esta possui. Por exemplo,
+em sistemas orientados à objetos uma unidade pode ser uma classe. 
+Teste de integração refere-se a testar a intregação de duas partes do seu sistema, testes que garantem que duas classes se 
+comunicam são testes de integração por exemplo. 
+Teste de sistema refere-se a testes de funcionalidades completas do sistema, com todas as unidades funcionando.
+
+-Caso de teste é o conjunto de condições necessárias para realizar testes, os quais tem por finalidade encontrar defeitos e
+garantir que os requisitos foram cumpridos. Exemplo: Para uma entrada x determinada ação deve resultar em y e para realizar o
+teste é necesário que a classe XY esteja instanciada.
+
+-Testes manuais são os testes em que o profissional deve realizar as ações para seguir o fluxo do teste. Testes automatizados
+são testes em que softwares ou frameworks realizam as ações para completar os testes, estes possuem maior valor de "resteste".
+
+-Testes de caixa-branca são os que o se tem conhecimento do código fonte, permitindo que partes específicas do software possam
+ser isoladas e testadas.
+Testes de caixa-preta são os que não se tem acesso ao código fonte, então os testes são geridos de acordo com os requisitos do
+sistema.
+
+-Teste de regressão refere-se a testes que são realizados em diferentes versões do software, pegam-se testes que foram realizados
+em uma versão anterior e que estão "passando" e depois executam-se novamente na nova versão.
+
+-Critérios de testes são critérios que devem ser utilizados para geração de casos de teste a fim de atingir determinados objetivos.
+Exemplo: Análise de Valor Limite, em que são testados valores próximos à uma entrada permitida.
