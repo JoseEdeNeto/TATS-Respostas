@@ -30,5 +30,46 @@ public class CalcularSalarioPM {
         if(salariobase <= 0f)
             msgErro = "Salario Vazio\n";
     }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
+
+    public float getSalarioBase() {
+        return salariobase;
+    }
+
+    public void setSalarioBase(float salariobase) {
+        this.salariobase = salariobase;
+    }
+
+    public String getMsgErro() {
+        return msgErro;
+    }
+
+    public void setMsgErro(String msgErro) {
+        this.msgErro = msgErro;
+    }
+    
     
 }
