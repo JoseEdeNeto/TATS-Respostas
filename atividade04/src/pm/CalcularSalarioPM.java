@@ -27,6 +27,12 @@ public class CalcularSalarioPM {
             msgErro = "Email Vazio\n";
         if(cargo.equals(""))
             msgErro = "Cargo Vazio\n";
+        else if(!cargo.equals("DESENVOLVEDOR") || 
+                !cargo.equals("DBA") ||
+                !cargo.equals("TESTADOR") ||
+                !cargo.equals("GERENTE"))
+            msgErro += "Cargo Invalido\n";
+        
         if(salariobase <= 0f)
             msgErro = "Salario Vazio\n";
     }
