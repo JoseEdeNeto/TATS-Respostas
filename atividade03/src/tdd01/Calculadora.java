@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Calculadora {
 
-    List<Proposta> calcular(float salario,float valorDoEmprestimo) {
+    public List<Proposta> calcular(float salario,float valorDoEmprestimo) {
         ArrayList<Proposta> propostas = new ArrayList<>();
         
         if(salario <= 1000){
