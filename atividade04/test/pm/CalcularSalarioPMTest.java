@@ -16,6 +16,17 @@ public class CalcularSalarioPMTest {
         pm.setSalarioBase(5000f);
         pm.setCargo("DESENVOLVEDOR");
         float salarioLiquido = pm.pressionarBotaoCalcular();
-        assertEquals(salarioLiquido, 4000f, 0.01);
+        assertEquals(4000f, salarioLiquido, 0.01);
+    }
+    
+    @Test
+    public void testeCargoInvalido(){
+        CalcularSalarioPM pm = new CalcularSalarioPM();
+        pm.setNome("Joao");
+        pm.setEmail("joao@bol.com.br");
+        pm.setSalarioBase(5000f);
+        pm.setCargo("ARQUITETO");
+        float salarioLiquido = pm.pressionarBotaoCalcular();
+        assertEquals("Cargo Invalido\n", pm.getMsgErro());
     }
 }
