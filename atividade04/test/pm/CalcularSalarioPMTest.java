@@ -29,4 +29,15 @@ public class CalcularSalarioPMTest {
         float salarioLiquido = pm.pressionarBotaoCalcular();
         assertEquals("Cargo Invalido\n", pm.getMsgErro());
     }
+    
+    @Test
+    public void testeCamposVazios(){
+        CalcularSalarioPM pm = new CalcularSalarioPM();
+        pm.setNome("");
+        pm.setEmail("");
+        pm.setSalarioBase(0f);
+        pm.setCargo("");
+        float salarioLiquido = pm.pressionarBotaoCalcular();
+        assertEquals("Nome Vazio\n" + "Email Vazio\n" + "Cargo Vazio\n" + "Salario Vazio\n", pm.getMsgErro());
+    }
 }
