@@ -40,4 +40,15 @@ public class CalcularSalarioPMTest {
         float salarioLiquido = pm.pressionarBotaoCalcular();
         assertEquals("Nome Vazio\n" + "Email Vazio\n" + "Cargo Vazio\n" + "Salario Vazio\n", pm.getMsgErro());
     }
+    
+    @Test
+    public void testeCaseSensitive(){
+        CalcularSalarioPM pm = new CalcularSalarioPM();
+        pm.setNome("Joao");
+        pm.setEmail("joao@bol.com.br");
+        pm.setSalarioBase(5000f);
+        pm.setCargo("desenvolvedor");
+        float salarioLiquido = pm.pressionarBotaoCalcular();
+        assertEquals(4000f, salarioLiquido, 0.01);
+    }
 }
