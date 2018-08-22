@@ -13,7 +13,7 @@ public class CalcularSalarioPM {
     
     public float pressionarBotaoCalcular(){
         validarCampos();
-        Funcionario f = new Funcionario(nome, email, cargo, salariobase);
+        Funcionario f = new Funcionario(nome.toUpperCase(), email.toUpperCase(), cargo.toUpperCase(), salariobase);
         Calculadora c = new Calculadora();
         float salarioLiquido = c.calcular(f.getSalarioBase(), f.getCargo());
         
@@ -28,10 +28,10 @@ public class CalcularSalarioPM {
             msgErro += "Email Vazio\n";
         if(cargo.equals(""))
             msgErro += "Cargo Vazio\n";
-        else if(!cargo.equals("DESENVOLVEDOR") || 
-                !cargo.equals("DBA") ||
-                !cargo.equals("TESTADOR") ||
-                !cargo.equals("GERENTE"))
+        else if(!cargo.equalsIgnoreCase("DESENVOLVEDOR") || 
+                !cargo.equalsIgnoreCase("DBA") ||
+                !cargo.equalsIgnoreCase("TESTADOR") ||
+                !cargo.equalsIgnoreCase("GERENTE"))
             msgErro += "Cargo Invalido\n";
         
         if(salariobase <= 0f)
