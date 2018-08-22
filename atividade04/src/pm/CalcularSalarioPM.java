@@ -1,6 +1,7 @@
 package pm;
 
 import calculadora.Calculadora;
+import calculadora.Funcionario;
 
 public class CalcularSalarioPM {
     
@@ -12,9 +13,9 @@ public class CalcularSalarioPM {
     
     public float pressionarBotaoCalcular(){
         validarCampos();
-
+        Funcionario f = new Funcionario(nome, email, cargo, salariobase);
         Calculadora c = new Calculadora();
-        float salarioLiquido = c.calcular(salariobase, cargo);
+        float salarioLiquido = c.calcular(f.getSalarioBase(), f.getCargo());
         
         return salarioLiquido; 
     }
@@ -22,11 +23,11 @@ public class CalcularSalarioPM {
     private void validarCampos() {
         msgErro = "";
         if(nome.equals(""))
-            msgErro = "Nome Vazio\n";
+            msgErro += "Nome Vazio\n";
         if(email.equals(""))
-            msgErro = "Email Vazio\n";
+            msgErro += "Email Vazio\n";
         if(cargo.equals(""))
-            msgErro = "Cargo Vazio\n";
+            msgErro += "Cargo Vazio\n";
         else if(!cargo.equals("DESENVOLVEDOR") || 
                 !cargo.equals("DBA") ||
                 !cargo.equals("TESTADOR") ||
@@ -34,7 +35,7 @@ public class CalcularSalarioPM {
             msgErro += "Cargo Invalido\n";
         
         if(salariobase <= 0f)
-            msgErro = "Salario Vazio\n";
+            msgErro += "Salario Vazio\n";
     }
 
     public String getNome() {
@@ -76,6 +77,5 @@ public class CalcularSalarioPM {
     public void setMsgErro(String msgErro) {
         this.msgErro = msgErro;
     }
-    
     
 }
